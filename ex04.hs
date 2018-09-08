@@ -7,6 +7,14 @@ myLength xs = run xs 0
     run [] n = n
     run (_:ys) n = run ys (n+1)
 
+-- Weird: if we use Int instead of Integral constraint, the compiled function is
+-- much faster. Why?
+myLength' :: [a] -> Int
+myLength' xs = run xs 0
+  where
+    run [] n = n
+    run (_:ys) n = run ys (n+1)
+
 -- Just for comparison, here's a bad solution which doesn't use tail recursion,
 -- thus leading to stack overflow on long lists.
 myLengthBad :: Integral n => [a] -> n
