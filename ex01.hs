@@ -1,5 +1,3 @@
-module Ex01 where
-
 -- |Find the last element of a list.
 myLast :: [a] -> a
 myLast (x : []) = x

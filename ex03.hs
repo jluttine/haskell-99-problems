@@ -1,5 +1,3 @@
-module Ex03 where
-
 -- |Find the K'th element of a list. The first element in the list is number 1.
 elementAt :: Integral n => [a] -> n -> a
 elementAt [] _ = error "index out of bounds"
