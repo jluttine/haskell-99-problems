@@ -1,3 +1,5 @@
+module Ex04 where
+
 import Data.List
 
 -- |Find the number of elements of a list.
